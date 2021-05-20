@@ -1,0 +1,99 @@
+.main-slider
+    min-height: 500px
+    position: relative
+    text-align: center
+    margin-top: 30px
+    &-item
+        position: relative
+        font-size: 1.62rem
+        line-height: 1.2
+        font-weight: 400
+        text-align: center
+        color: #5C5A58
+        height: 500px
+        .container
+            height: 100%
+        img
+            min-width: 1600px
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            z-index: 0
+    &_content
+        @include row-flex()
+        justify-content: center
+        align-items: center
+        height: 100%
+        .column
+            @include col()
+            @include size-xs(4)
+            z-index: 1
+        &.is-right
+            justify-content: flex-end
+            .column
+                @include size-xs(4.5)
+
+    &-title
+        font-size: 2.75rem
+        font-weight: 700
+        text-transform: uppercase
+        color: #000000
+        margin-bottom: 2rem
+        &.title-2
+            font-size: 2.12rem
+            font-weight: 400
+            strong
+                font-weight: 700
+                color: #000000
+    .button
+        margin-top: 2.87rem
+        text-decoration-line: none
+        display: inline-block
+.slick
+    &-arrow
+        background: url('../img/arrow.svg') 50% 50% no-repeat
+        border: none
+        color: transparent
+        width: 26px
+        height: 26px
+        cursor: pointer
+        position: absolute
+        bottom: 10px
+        margin: auto
+        z-index: 5
+        transition: transform 0.2s ease
+        &.slick-prev
+            left: calc(50% - 71px)
+            transform: rotate(180deg)
+        &.slick-next
+            right: calc(50% - 71px)
+    &-dots
+        list-style-type: none
+        text-align: center
+        display: inline-block
+        margin: 0 auto
+        li
+            display: inline-block
+            margin: 15px
+            &::before
+                display: none
+            &.slick-active
+                button
+                    background: $primary
+        button
+            position: relative
+            background: transparent
+            border: none
+            font-size: 0
+            width: 13px
+            height: 13px
+            background: #ebebeb
+            border-radius: 100%
+            transition: all 0.2s ease
+            cursor: pointer
+
+            &:hover
+                background: $primary

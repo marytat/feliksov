@@ -1,0 +1,50 @@
+.catalog
+    &-elements
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+        margin-left: -5px
+        margin-right: -5px
+    &-item
+        width: calc(20% - 10px)
+        margin-left: 5px
+        margin-right: 5px
+        a:hover
+            color: $primary-text-color
+        &-img
+            position: relative
+            height: 310px
+            overflow: hidden
+            img
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+                min-width: 100%
+                height: auto
+        &-favorite
+            background: url('../img/favorite.svg') 50% 50% no-repeat
+            background-size: contain
+            width: 27px
+            height: 25px
+            position: absolute
+            right: 15px
+            bottom: 13px
+            &:hover
+                background-image: url('../img/favorite-black.svg')
+            &:active,
+            &.active
+                background-image: url('../img/favorite-active.svg')
+        &-info
+            font-size: 0.93rem
+            line-height: 1.2
+            margin: 20px 0
+        &-title
+            font-size: 1.31rem
+        &-insert
+            color: $second-text-color
+            margin: 10px 0
+        &-price
+            margin-top: 20px

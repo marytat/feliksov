@@ -1,0 +1,15 @@
+.footer
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto
+    padding: 50px 0
+    background-color: $bg-color
+    @include to($break_md)
+        padding: 30px 0
+
+    &__container
+        @include wrapper()
+
+    &__row
+        display: flex
+        justify-content: space-between
+        @include row-flex()

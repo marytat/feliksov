@@ -1,0 +1,58 @@
+.caption_subtitle
+    font-size: 15px
+    padding-bottom: 20px
+    display: block
+    @include from($break_md)
+        font-size: 21px
+        padding-bottom: 30px
+
+.feedback_buttons
+    display: flex
+    .button
+        display: inline-block
+        width: 50%
+        text-transform: none
+
+.feedback_form
+    display: block
+    width: 100%
+    padding: 40px 0 60px 0
+    .validate_block
+        @include clearfix()
+        .input_block
+            display: block
+            width: 100%
+            @include from($break_md)
+                display: inline-block
+                width: 35%
+                float: left
+
+            @include from($break_lg)
+                width: 50%
+
+        .button_block
+            display: block
+            width: 100%
+            text-align: center
+            @include from($break_md)
+                display: inline-block
+                float: right
+                width: 65%
+                height: 160px
+
+            @include from($break_lg)
+                width: 50%
+
+            button
+                width: 100%
+                margin: 0 0 20px 0
+                @include from($break_md)
+                    width: 330px
+                    margin: 0 auto
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 22px
+                    padding: 13px 0
+
+    &.hide_form
+        display: none

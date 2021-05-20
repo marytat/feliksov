@@ -1,0 +1,34 @@
+.menu-catalog
+    display: none
+    padding-top: 30px
+    padding-bottom: 30px
+    @include wrapper()
+    @include from ($break_sm)
+        display: block
+
+    @include to($break_md - 1)
+        padding-top: 20px
+        padding-bottom: 20px
+
+    &__list
+        display: flex
+        justify-content: space-between
+        margin: 0
+        padding: 0
+        list-style-type: none
+
+    &__item
+        text-align: center
+        &-selected
+            .menu-catalog
+                &__link
+                    color: #000000
+                    font-weight: 600
+
+    &__link
+        text-transform: uppercase
+        text-decoration: none
+        font-weight: 400
+        font-size: 16px
+        @include to($break_md - 1)
+            font-size: 10px

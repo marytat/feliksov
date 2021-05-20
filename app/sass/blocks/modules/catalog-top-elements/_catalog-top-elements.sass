@@ -1,0 +1,28 @@
+.catalog-top-elements
+
+    h3
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 15px
+        margin: 0
+        @include from($break_md)
+            margin: 10px 0
+            font-size: 21px
+
+        @include from($break_lg)
+            margin: 20px 0
+
+    &_list
+        @include row-flex()
+
+    .catalog-item
+        @include size-xs(10)
+        @include size-sm(5)
+
+        @include size-md(2)
+        @include size-lg(2)
+
+        @include col()
+        &:nth-child(5)
+            @include to($break_md)
+                display: none

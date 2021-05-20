@@ -1,0 +1,83 @@
+.modal
+    background: rgba(0, 0, 0, 0.5)
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 11
+    overflow-y: auto
+    opacity: 0
+    display: none
+    transition: opacity .15s linear
+    &.active
+        opacity: 1
+        display: block
+        .modal-card
+            transform: translateY(0)
+    &-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: 0.5rem auto
+        min-height: calc(100vh - 0.5rem*2)
+    &-card
+        position: relative
+        margin: auto
+        background: #ffffff
+        border: 1px solid #000
+        max-width: 600px
+        height: auto
+        display: flex
+        flex-direction: column
+        transform: translateY(-100%)
+        &-title
+            font-size: 1.5rem
+            font-weight: 700
+            margin-bottom: 28px
+            text-transform: uppercase
+            text-align: center
+        &-accent
+            font-size: 1.25rem
+            line-height: 1.5
+            font-weight: 700
+        &-content
+            color: #000
+            font-size: 0.87rem
+            font-weight: 400
+            line-height: 1.2
+            padding: 50px 35px
+            box-sizing: border-box
+            p
+                margin-bottom: 0.62rem
+
+        &-close
+            background: #F5F5F5
+            position: absolute
+            top: 0
+            right: 0
+            width: 59px
+            height: 59px
+            cursor: pointer
+            &::before,
+            &::after
+                content: ''
+                width: 37px
+                height: 1px
+                background: #9A9A9A
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+            &::before
+                transform: rotate(45deg)
+            &::after
+                transform: rotate(-45deg)
+    &#gift-on-the-way
+        .modal-card-content
+            padding-bottom: 5px
+            img
+                width: 100%

@@ -1,0 +1,78 @@
+.main-top-banner
+    margin-bottom: 20px
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: contain
+    display: block
+
+    @include to($break_sm - 1)
+        @include wrapper()
+
+    @include from($break_sm)
+        background-size: cover
+        background-image: url("../../img/main-banner-sm.jpg")
+        background-position: center
+        margin-bottom: 30px
+
+    @include from($break_md)
+        background-size: cover
+        background-position: center
+        background-image: url("../../img/main-banner-md.jpg")
+        margin-bottom: 50px
+
+    @include from($break_lg)
+        background-image: url("../../../img/main-banner-min.jpg")
+        background-size: cover
+        background-position: center
+
+    &_container
+        @include wrapper()
+
+    &_content
+        height: auto
+        padding-top: 10px
+        @include from($break_sm)
+            height: 280px
+            padding-top: 40px
+
+        @include from($break_md)
+            height: 500px
+            padding-top: 115px
+
+        @include col()
+        @include size-xs(10)
+        @include size-sm(5)
+        @include size-lg(4.8)
+
+        &__title
+            font-size: 24px
+            margin-bottom: 20px
+
+            font-family: "Tenor Sans", sans-serif
+            @include from($break_md)
+                font-size: 40px
+                margin-bottom: 44px
+
+        &__text
+            font-size: 12px
+            line-height: 1.2
+            font-weight: 400
+            @include from($break_md)
+                font-size: 15px
+                letter-spacing: 1px
+                font-weight: 500
+            @include from($break_lg)
+                font-size: 18px
+                letter-spacing: 1px
+                font-weight: 500
+
+    &_img
+        display: block
+        width: 100%
+        height: 178px
+        background-image: url("../../img//main-banner-xs.jpg")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include from ($break_sm)
+            display: none

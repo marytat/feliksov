@@ -1,0 +1,17 @@
+.catalog-section-list
+    @include row-flex()
+    .catalog-item
+        @include u-size(4,4,10px)
+        @include u-col(10px)
+
+        @include from($break_sm)
+            @include u-size(2,4,20px)
+            @include u-col(20px)
+
+        @include from($break_md)
+            @include u-size(1,4,20px)
+            @include u-col(20px)
+
+        @include from($break_lg)
+            @include u-size(1,4,12px)
+            @include u-col(12px)

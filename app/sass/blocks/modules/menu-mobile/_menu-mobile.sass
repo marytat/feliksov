@@ -1,0 +1,100 @@
+.menu-mobile
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    position: absolute
+    z-index: 100
+    top: 40px
+    left: 0
+    width: calc(100% - 20px)
+    height: 0
+    overflow: hidden
+    transition: height 0.2s linear
+    background-color: #fafafa
+    @include wrapper-full()
+
+    &.open
+        height: calc(100% - 20px)
+
+    &_top
+        width: 100%
+        &_list
+            display: flex
+            justify-content: space-between
+            list-style-type: none
+
+        &_item
+            display: inline-block
+            padding: 16px 0 13px 0
+            font-weight: 500
+
+        &__link
+            color: #72283f
+            text-decoration: none
+
+    &_personal
+        position: absolute
+        top: 50px
+        width: calc(100% - 50px)
+        padding: 3px 15px
+        background: #f5f5f5
+        &__title
+            display: flex
+            justify-content: space-between
+            font-size: 16px
+            font-weight: 500
+            color: #72283f
+            &:after
+                content: " "
+                width: 19px
+                height: 9px
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+                background-image: url("../../../img/arrow-down.svg")
+                margin-top: 5px
+
+            &.open
+                &:after
+                    transform: rotate(180deg)
+
+        &_list
+
+            height: 0
+            overflow: hidden
+            transition: height 0.2s linear
+            background: #f5f5f5
+            list-style-type: none
+            &.open
+                height: 128px
+
+        &_item
+            padding: 7px 0
+
+        &__link
+            color: #000000
+            font-size: 13px
+            text-decoration: none
+            font-weight: 400
+
+    &_sections
+        display: flex
+        flex: 2 0 auto
+        flex-direction: column
+        align-content: center
+        justify-content: center
+        &_list
+            list-style-type: none
+
+        &_item
+            padding: 10px 0
+            text-align: center
+
+        &__link
+            text-decoration: none
+            font-weight: 500
+            color: #72283f
+            font-size: 16px
+            &.selected
+                font-weight: 700
+                text-decoration: underline

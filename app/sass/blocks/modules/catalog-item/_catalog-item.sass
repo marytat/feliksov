@@ -1,0 +1,71 @@
+.catalog-item
+
+    padding: 20px 0
+
+    &__link
+        cursor: pointer
+        font-weight: 500
+        text-decoration: none
+
+        &:active
+            text-decoration: none
+
+        &:hover
+            text-decoration: none
+
+    &__img
+        display: block
+        position: relative
+        width: 100%
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        background-color: #f8f8f8
+        background-blend-mode: multiply
+        @include to($break_md)
+            height: 280px
+
+        @include from-to($break_md, $break_lg)
+            height: 220px
+
+        @include from($break_lg)
+            height: 310px
+
+    &__title
+        padding: 20px 0 0
+        font-size: 21px
+        line-height: 26px
+
+    &__subtitle
+        padding: 10px 0
+        font-style: normal
+        font-weight: 400
+        font-size: 15px
+        line-height: 18px
+        color: #7a7a7a
+
+    &__price
+        font-weight: 500
+        font-size: 15px
+        line-height: 18px
+        color: #000000
+
+    &__favorite
+        display: block
+        position: absolute
+        right: 15px
+        bottom: 15px
+        width: 30px
+        height: 30px
+        background-position: center
+        background-repeat: no-repeat
+        background-image: url("../../img/favorite.svg")
+        &:hover
+            cursor: pointer
+            background-image: url("../../img/favorite-black.svg")
+        &:active
+            cursor: pointer
+            background-image: url("../../img/favorite-active.svg")
+
+        &.selected
+            background-image: url("../../img/favorite-active.svg")

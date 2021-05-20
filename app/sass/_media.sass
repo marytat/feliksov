@@ -1,0 +1,104 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1500px)
+	/**/
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+@media only screen and (max-width : 640px)
+	/**/
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 375px)
+	/**/
+@media only screen and (max-width : 320px)
+	/**/
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	.container
+		padding-left: 10px
+		padding-right: 10px
+	.header
+		&_top
+			&_logo
+				width: calc(40% - 14px)
+			&_left
+				width: calc(30% - 14px)
+			&_right
+				width: calc(30% - 14px)
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+@media only screen and (min-width : 640px)
+	.container
+		padding-left: 20px
+		padding-right: 20px
+	.header
+		&_top
+			&_logo
+				width: calc(20% - 20px)
+			&_left
+				width: calc(40% - 20px)
+			&_right
+				width: calc(40% - 20px)
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+@media screen and (min-width: 1000px)
+	.container
+		padding-left: 10px
+		padding-right: 10px
+	.header
+		&_top
+			&_logo
+				width: calc(20% - 10px)
+			&_left
+				width: calc(40% - 10px)
+			&_right
+				width: calc(40% - 10px)
+	.footer
+		&__row
+			margin-left: -5px
+			margin-right: -5px
+	.menu-footer
+		width: calc(30% - 10px)
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.container
+		padding-left: 0
+		padding-right: 0
+	.footer
+		&__container
+			padding-left: 0
+			padding-right: 0
+	.menu-footer
+		width: calc(30% - 10px)
+
+@media only screen and (min-width : 1600px)
+	.main-slider
+		&-item
+			img
+				min-width: 100%

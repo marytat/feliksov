@@ -1,0 +1,372 @@
+// @import "libs/smart-grid.sass"
+// @import "blocks/modules/header/header.scss"
+
+// @import "vars"
+// @import "app/libs/jquery/slick/slick.scss"
+// @import "buttons"
+// @import "form"
+// @import "slider"
+// @import "modal"
+// @import "catalog"
+
+// *
+//     -webkit-box-sizing: border-box
+//     -moz-box-sizing: border-box
+//     box-sizing: border-box
+//     margin: 0
+//     padding: 0
+//     &:before, &:after
+//         -webkit-box-sizing: border-box
+//         -moz-box-sizing: border-box
+//         box-sizing: border-box
+
+// *::-webkit-input-placeholder
+//     color: #828282
+//     opacity: 1
+
+// *:-moz-placeholder
+//     color: #828282
+//     opacity: 1
+
+// *::-moz-placeholder
+//     color: #828282
+//     opacity: 1
+
+// *:-ms-input-placeholder
+//     color: #828282
+//     opacity: 1
+
+// body input:focus:required:invalid,
+// body textarea:focus:required:invalid
+//     color: #828282
+// body input:required:valid,
+// body textarea:required:valid
+//     color: #828282
+
+// html, body
+//     height: 100%
+
+// body
+//     font-size: 16px
+//     color: #000
+//     min-width: 320px
+//     min-height: 100%
+//     position: relative
+//     line-height: 1.2
+//     font-family: $default-font
+//     font-weight: 400
+
+// .wrapper
+//     max-width: 1440px
+//     margin: 0 auto
+// strong
+//     font-weight: 700
+// a:hover
+//     color: $primary-text-color
+// .content a
+//     color: inherit
+//     text-decoration: none
+//     border-bottom: 1px solid transparent
+//     transition: border-color 0.2s ease
+//     &:hover
+//         border-color: inherit
+
+// .img-responsive
+//     display: block
+//     max-width: 100%
+//     height: auto
+
+// .text-center
+//     text-align: center
+// .hidden
+//     visibility: hidden
+// .is-clipped
+//     overflow: hidden
+// .h3
+//     font-size: 1.31rem
+//     line-height: 1.2
+//     font-weight: 600
+//     text-transform: uppercase
+// .header
+//     .navbar
+//         background: #F8F8F8
+
+// .container
+//     height: 100%
+//     min-height: 100%
+//     max-width: 1200px
+//     margin: 0 auto
+//     padding-left: 30px
+//     padding-right: 30px
+// .logo
+//     &-header
+//         width: 182px
+//         padding: 0
+//         &.navbar-item
+//             img
+//                 min-width: 182px
+//                 max-height: 52px
+// // .header
+// // 	margin-bottom: 3.125rem
+// // 	.navbar
+// // 		& > .container
+// // 			& > .navbar-menu
+// // 				margin-left: -.75rem
+// // 	.navbar-item
+// // 		padding: 0.5rem 0.94rem
+// // 		font-size: 1rem
+// // 		text-transform: uppercase
+// // 		letter-spacing: 0.12em
+// // 	.categories
+// // 		ul
+// // 			list-style-type: none
+// // 			margin: 1.87rem 0
+// // 			display: flex
+// // 			flex-direction: row
+// // 			flex-wrap: wrap
+// // 			justify-content: space-between
+// // 			align-items: center
+// // 			li
+// // 				text-transform: uppercase
+// // 				font-size: 1rem
+// // 				letter-spacing: 0.12em
+// // 				a
+// // 					&:hover
+// // 						color: inherit
+// // 	&-basket
+// // 		&-count
+// // 			background: $active
+// // 			font-size: 0.75rem
+// // 			line-height: 1.66
+// // 			font-weight: 500
+// // 			color: #ffffff
+// // 			width: 20px
+// // 			height: 20px
+// // 			border-radius: 100%
+// // 			text-align: center
+// // 			margin-left: 0.62rem
+// // 			display: inline-block
+// // .header
+// // 	display: block
+// // 	flex: 0 0 auto
+// // 	&_top
+// // 		z-index: 100
+// // 		top: 0
+// // 		width: 100%
+// // 		background-color: #f8f8f8
+// // 		&_container
+// // 			display: flex
+// // 			justify-content: space-between
+// // 		&_left
+// // 			display: flex
+// // 			align-items: center
+// // 			justify-content: flex-start
+// // 			a
+// // 				margin-right: 30px
+// // 		&_right
+// // 			display: flex
+// // 			align-items: center
+// // 			justify-content: flex-end
+// // 			a
+// // 				margin-left: 30px
+// // 		&__link
+// // 			text-transform: uppercase
+// // 			text-decoration: none
+// // 			font-weight: 400
+// // 			font-size: 16px
+// // 			display: flex
+// // 			&_text
+// // 				display: inline-block
+// // 		&_logo
+// // 			img
+// // 				display: block
+// // 				width: 182px
+// // 				height: 52px
+// // 				margin: 34px auto
+// // 		.mobile_icon
+// // 			display: none
+// // 		.cart_counter
+// // 			display: inline-flex
+// // 			align-items: center
+// // 			justify-content: center
+// // 			width: 20px
+// // 			height: 20px
+// // 			padding: 4px
+// // 			border-radius: 10px
+// // 			background-color: #72283f
+// // 			color: #ffffff
+// // 			font-size: 12px
+// // 			font-style: normal
+// // 			margin-left: 5px
+// // 			margin-top: -2px
+// .main-banner
+//     background: url('../img/main-banner-min.jpg') 50% 50% no-repeat
+//     background-size: cover
+//     min-height: 500px
+//     font-size: 1.12rem
+//     font-weight: 500
+//     padding-bottom: 5.81rem
+//     .title
+//         margin-top: 7.18rem
+//         margin-bottom: 2.75rem
+//         &:not(:last-child)
+//             margin-bottom: 2.75rem
+// .categories
+//     &-big
+//         margin-top: calc(50px - 0.37rem)
+//         margin-bottom: calc(50px - 0.37rem)
+//         &-item
+//             background: #F5F5F5
+//             font-size: 1.75rem
+//             font-weight: 400
+//             display: block
+//             min-height: 282px
+//             position: relative
+//             margin-top: 0.37rem
+//             margin-bottom: 0.37rem
+//             &:nth-child(even)
+//                 margin-right: 0.37rem
+//             &:nth-child(odd)
+//                 margin-left: 0.37rem
+//             img
+//                 position: absolute
+//                 top: 0
+//                 bottom: 0
+//                 left: 0
+//                 right: 0
+//                 margin: auto
+//             &:hover
+//                 color: $primary-text-color
+//         &-arrow
+//             background: url('../img/arrow-circle.svg') 0 0 no-repeat
+//             width: 3.25rem
+//             height: 3.25rem
+//             position: absolute
+//             bottom: 1.6rem
+//             right: 2.62rem
+//         &-title
+//             position: absolute
+//             bottom: 1.18rem
+//             left: 2.62rem
+// .main-slider
+//     min-height: 500px
+//     position: relative
+//     text-align: center
+//     &-item
+//         position: relative
+//         font-size: 1.62rem
+//         line-height: 1.2
+//         font-weight: 400
+//         text-align: center
+//         color: #5C5A58
+//         height: 500px
+//         img
+//             min-width: 1600px
+//             position: absolute
+//             top: 0
+//             bottom: 0
+//             left: 0
+//             right: 0
+//             margin: auto
+//             z-index: 0
+//         .columns
+//             height: 100%
+//             .column
+//                 z-index: 1
+//         &.is-right
+//             .column
+//                 float: right
+//     &-title
+//         font-size: 2.75rem
+//         font-weight: 700
+//         text-transform: uppercase
+//         color: $primary-text-color
+//         margin-bottom: 2rem
+//         &.title-2
+//             font-size: 2.12rem
+//             font-weight: 400
+//             strong
+//                 font-weight: 700
+//                 color: $primary-text-color
+//     .button
+//         margin-top: 2.87rem
+// .new-items
+//     .h3
+//         margin-bottom: 40px
+// .footer
+//     flex: 0 0 auto
+//     padding: 50px 0
+//     background-color: #f8f8f8
+//     &__container
+//         padding-left: 30px
+//         padding-right: 30px
+//         max-width: 1200px
+//         margin: 0 auto
+//     &__row
+//         margin-left: -7px
+//         margin-right: -7px
+//         display: flex
+//         flex-wrap: wrap
+//         display: flex
+//         justify-content: space-between
+// .menu-footer
+//     margin-left: 7px
+//     margin-right: 7px
+//     box-sizing: border-box
+//     word-wrap: break-word
+//     &__title
+//         color: $primary-text-color
+//         padding: 10px 0
+//         font-size: 0.87rem
+//         text-transform: uppercase
+//     &__links
+//         list-style-type: none
+//         li
+//             color: #959595
+//             font-weight: 400
+//             padding: 10px 0
+//             font-size: 0.87rem
+//             letter-spacing: 0.06em
+//             a
+//                 text-decoration: none
+//                 color: #959595
+//                 font-weight: 400
+//     &:nth-child(2)
+//         .menu-footer__links
+//             li
+//                 display: inline-block
+//                 &::after
+//                     content: "/"
+//                     display: inline-block
+//                     padding-left: 5px
+
+// .soc-icons
+//     display: flex
+//     padding-top: 10px
+//     &__icon
+//         display: inline-block
+//         width: 24px
+//         height: 24px
+//         background-size: 24px 24px
+//         background-position: center
+//         background-repeat: no-repeat
+//         margin-right: 20px
+// .insta
+//     background-image: url('../img/insta.svg')
+// .fb
+//     background-image: url('../img/fb.svg')
+// .vk
+//     background-image: url('../img/vk.svg')
+
+// @import "media"
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Tenor+Sans&display=swap')
+
+@import "maps/helpers/variables"
+@import "maps/helpers/mixins"
+@import "maps/helpers/functions"
+@import "maps/vendor/libs"
+// @import "maps/base/fonts.scss"
+@import "maps/base/general"
+@import "blocks/modules/header/header"
+@import "blocks/modules"

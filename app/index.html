@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Feliksov Diamonds</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="img/banner.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/favicon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/icon_72x72.ico">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/icon_114x144.ico">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="libs/jquery/slick/slick.css" />
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- <section class="header">
+
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="container is-max-widescreen">
+				<div class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item" href="#">Поиск</a>
+						<a class="navbar-item" href="#">Ювелирное ателье</a>
+					</div>
+					<div class="navbar-brand">
+						<a class="navbar-item logo-header" href="https://bulma.io">
+							<img class="img-responsive" src="img/logo_feliksov.svg">
+						</a>
+
+						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+							data-target="navbarBasicExample">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="navbar-end">
+						<a class="navbar-item" href="#">Избранное</a>
+						<a class="navbar-item" href="#">Войти</a>
+						<a class="navbar-item header-basket" href="#">
+							Корзина
+							<span class="header-basket-count">12</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="categories">
+				<ul>
+					<li>
+						<a href="#">Кольца</a>
+					</li>
+					<li>
+						<a href="#">Помолвочные кольца</a>
+					</li>
+					<li>
+						<a href="#">Серьги</a>
+					</li>
+					<li>
+						<a href="#">Колье</a>
+					</li>
+					<li>
+						<a href="#">Браслеты</a>
+					</li>
+					<li>
+						<a href="#">Подвески</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section> -->
+	<header class="header">
+		<div class="header_top">
+			<div class="header_top_container container">
+				<div class="header_top_left">
+					<i class="mobile_icon burger"></i>
+					<a href="#" class="header_top__link"><span class="header_top__link_text">Поиск</span></a>
+					<a href="#" class="header_top__link"><span class="header_top__link_text">Ювелирное ателье</span></a>
+				</div>
+				<div class="header_top_logo">
+					<a href="#" class="logo_link">
+						<img src="img/logo_feliksov.svg">
+					</a>
+				</div>
+				<div class="header_top_right">
+					<a href="#" class="header_top__link"><span class="header_top__link_text">Избранное
+						</span><i class="mobile_icon favorite active"></i></a>
+					<a href="#" class="header_top__link enter_link"><span class="header_top__link_text">войти</span></a>
+					<a href="#" class="header_top__link"><span class="header_top__link_text">корзина</span> <i
+							class="mobile_icon cart"></i>
+						<i class="cart_counter">1</i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu-catalog">
+			<ul class="menu-catalog__list">
+				<li class="menu-catalog__item menu-catalog__item-selected"><a href="#"
+						class="menu-catalog__link">Кольца</a></li>
+				<li class="menu-catalog__item"><a href="#" class="menu-catalog__link">помолвочные
+						кольца</a></li>
+				<li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Серьги</a>
+				</li>
+				<li class="menu-catalog__item"><a href="#" class="menu-catalog__link">колье</a>
+				</li>
+				<li class="menu-catalog__item"><a href="#" class="menu-catalog__link">браслеты</a></li>
+				<li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Подвески</a></li>
+			</ul>
+		</div>
+
+		<div class="menu-mobile">
+			<div class="menu-mobile_top">
+				<ul class="menu-mobile_top_list">
+					<li class="menu-mobile_top_item"><a href="#" class="menu-mobile_top__link">Поиск</a></li>
+					<li class="menu-mobile_top_item"><a href="#" class="menu-mobile_top__link">Вход</a></li>
+				</ul>
+			</div>
+
+			<div class="menu-mobile_personal">
+				<div class="menu-mobile_personal__title">Личный кабинет</div>
+				<ul class="menu-mobile_personal_list">
+					<li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Мои заказы</a>
+					</li>
+					<li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Мои бонусы</a>
+					</li>
+					<li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Личные
+							данные</a></li>
+					<li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Выход</a></li>
+				</ul>
+			</div>
+			<div class="menu-mobile_sections">
+				<ul class="menu-mobile_sections_list">
+					<li class="menu-mobile_sections_item"><a href="#"
+							class="menu-mobile_sections__link selected">Кольца</a></li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Помолвочные
+							кольца</a></li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Серьги</a></li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Колье</a></li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Браслеты</a>
+					</li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Подвески</a>
+					</li>
+					<li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Ювелирное
+							ателье</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- <section class="main-banner">
+		<div class="container is-max-widescreen">
+			<div class="columns">
+				<div class="column is-half">
+					<h1 class="title">Магазин уникальных ювелирных изделий</h1>
+					<p>Дизайн&nbsp;&mdash; вот в&nbsp;чём удаётся проявить себя многим талантливым дизайнерам. Наша
+						ювелирная мастерская&nbsp;&mdash; не&nbsp;исключение, ведь создание эксклюзивных комплектов
+						на&nbsp;любые случаи жизни является любимым занятием мастеров. Мы&nbsp;не&nbsp;жалеем
+						ни&nbsp;сил, ни&nbsp;идей, ни&nbsp;времени на&nbsp;выполнение поставленных задач.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="categories-big">
+		<div class="container is-max-widescreen">
+			<div class="columns is-multiline">
+				<div class="column is-half">
+					<a class="categories-big-item" href="">
+						<img src="img/cat-rings-min.jpg" alt="Кольца">
+						<span class="categories-big-title">Кольца</span>
+						<span class="categories-big-arrow"></span>
+					</a>
+				</div>
+				<div class="column is-half">
+					<a class="categories-big-item" href="">
+						<img src="img/cat-engage-rings-min.jpg" alt="Помолвочные кольца">
+						<span class="categories-big-title">Помолвочные кольца</span>
+						<span class="categories-big-arrow"></span>
+					</a>
+				</div>
+				<div class="column is-half">
+					<a class="categories-big-item" href="">
+						<img src="img/cat-earrings-min.jpg" alt="Серьги">
+						<span class="categories-big-title">Серьги</span>
+						<span class="categories-big-arrow"></span>
+					</a>
+				</div>
+				<div class="column is-half">
+					<a class="categories-big-item" href="">
+						<img src="img/cat-bracelet-min.jpg" alt="Браслеты">
+						<span class="categories-big-title">Браслеты</span>
+						<span class="categories-big-arrow"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-slider">
+		<div class="main-slider-item">
+			<img src="img/banner-1-min.jpg" alt="Ювелирное ателье">
+			<div class="container is-max-widescreen">
+				<div class="columns is-centered is-vcentered">
+					<div class="column is-half">
+						<div class="main-slider-title">Ювелирное <br>ателье</div>
+						<div class="main-slider-text">Создайте свое уникальное украшение с дизайнерами бренда Feliksov
+							Diamonds
+						</div>
+						<a class="button" href="#">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-slider-item is-right">
+			<img src="img/banner-2-min.jpg" alt="Ювелирное ателье">
+			<div class="container is-max-widescreen">
+				<div class="columns is-vcentered">
+					<div class="column is-half is-offset-6">
+						<div class="main-slider-title title-2">Ювелирная мастерская <br><strong>FELIKSOV
+								DIAMONDS</strong></div>
+						<div class="main-slider-text">— это соединение <br>классики и новаторства, <br>традиций и
+							эксклюзива
+						</div>
+						<a class="button" href="#">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="new-items">
+		<div class="container is-max-widescreen">
+			<h3 class="h3">Новинки</h3>
+			<div class="catalog-elements">
+				<div class="new-items-item catalog-item">
+					<a href="#">
+						<div class="catalog-item-img">
+							<img src="img/catalog-item-1.jpg" alt="Кольцо Inês">
+							<div class="catalog-item-favorite"></div>
+						</div>
+						<div class="catalog-item-info">
+							<div class="catalog-item-title">Кольцо Inês</div>
+							<div class="catalog-item-insert">1 бриллиант - 0,51 карата</div>
+							<div class="catalog-item-price">218 000 р.</div>
+						</div>
+					</a>
+				</div>
+				<div class="new-items-item catalog-item">
+					<a href="#">
+						<div class="catalog-item-img">
+							<img src="img/catalog-item-2.jpg" alt="Кольцо Sophia">
+							<div class="catalog-item-favorite"></div>
+						</div>
+						<div class="catalog-item-info">
+							<div class="catalog-item-title">Кольцо Sophia</div>
+							<div class="catalog-item-insert">1 бриллиант - 0,5 карата</div>
+							<div class="catalog-item-price">12 500 р.</div>
+						</div>
+					</a>
+				</div>
+				<div class="new-items-item catalog-item">
+					<a href="#">
+						<div class="catalog-item-img">
+							<img src="img/catalog-item-3.jpg" alt="Кольцо Josephine">
+							<div class="catalog-item-favorite"></div>
+						</div>
+						<div class="catalog-item-info">
+							<div class="catalog-item-title">Кольцо Josephine</div>
+							<div class="catalog-item-insert">33 бриллианта - 0,26 карата</div>
+							<div class="catalog-item-price">56 080 р.</div>
+						</div>
+					</a>
+				</div>
+				<div class="new-items-item catalog-item">
+					<a href="#">
+						<div class="catalog-item-img">
+							<img src="img/catalog-item-4.jpg" alt="Кольцо Eleonora">
+							<div class="catalog-item-favorite"></div>
+						</div>
+						<div class="catalog-item-info">
+							<div class="catalog-item-title">Кольцо Eleonora</div>
+							<div class="catalog-item-insert">25 бриллиант - 0,66 карата</div>
+							<div class="catalog-item-price">272 590 р.</div>
+						</div>
+					</a>
+				</div>
+				<div class="new-items-item catalog-item">
+					<a href="#">
+						<div class="catalog-item-img">
+							<img src="img/catalog-item-5.jpg" alt="Кольцо Christina">
+							<div class="catalog-item-favorite"></div>
+						</div>
+						<div class="catalog-item-info">
+							<div class="catalog-item-title">Кольцо Christina</div>
+							<div class="catalog-item-insert">23 бриллианта - 0,66 карата</div>
+							<div class="catalog-item-price">163 490 р.</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</section> -->
+
+
+
+
+
+
+
+	<div class="main-content">
+		<div class="main-top-banner">
+			<div class="main-top-banner_container">
+				<div class="main-top-banner_img"></div>
+				<div class="main-top-banner_content">
+					<div class="main-top-banner_content__title">Магазин уникальных ювелирных изделий </div>
+					<div class="main-top-banner_content__text">Дизайн — вот в чём удаётся проявить себя многим
+						талантливым дизайнерам.
+						Наша ювелирная мастерская — не исключение, ведь создание эксклюзивных комплектов на любые случаи
+						жизни
+						является любимым занятием мастеров. Мы не жалеем ни сил, ни идей, ни времени на выполнение
+						поставленных
+						задач.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="catalog-sections-top">
+				<div class="catalog-sections-top__item" style="background-image: url('img/cat-rings-min.jpg');">
+					<a class="catalog-sections-top__item__title" href="#">Кольца</a>
+					<a href="#" class="more-button"></a>
+				</div>
+				<div class="catalog-sections-top__item" style="background-image: url('img/cat-engage-rings-min.jpg');">
+					<a class="catalog-sections-top__item__title" href="#">Помолвочные кольца</a>
+					<a href="#" class="more-button"></a>
+				</div>
+				<div class="catalog-sections-top__item" style="background-image: url('img/cat-earrings-min.jpg');">
+					<a class="catalog-sections-top__item__title" href="#">Серьги</a>
+					<a href="#" class="more-button"></a>
+				</div>
+				<div class="catalog-sections-top__item" style="background-image: url('img/cat-bracelet-min.jpg');">
+					<a class="catalog-sections-top__item__title" href="#">Браслеты</a>
+					<a href="#" class="more-button"></a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="main-slider">
+			<div class="main-slider-item">
+				<img src="img/banner-1-min.jpg" alt="Ювелирное ателье">
+				<div class="container">
+					<div class="main-slider_content">
+						<div class="column">
+							<div class="main-slider-title">Ювелирное <br>ателье</div>
+							<div class="main-slider-text">Создайте свое уникальное украшение с дизайнерами бренда
+								Feliksov
+								Diamonds
+							</div>
+							<a class="button" href="#">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-slider-item is-right">
+				<img src="img/banner-2-min.jpg" alt="Ювелирное ателье">
+				<div class="container">
+					<div class="main-slider_content is-right">
+						<div class="column">
+							<div class="main-slider-title title-2">Ювелирная мастерская <br><strong>FELIKSOV
+									DIAMONDS</strong></div>
+							<div class="main-slider-text">— это соединение <br>классики и новаторства, <br>традиций и
+								эксклюзива
+							</div>
+							<a class="button" href="#">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="catalog-top-elements">
+				<h3>Новинки</h3>
+				<div class="catalog-top-elements_list">
+					<div class="catalog-item"><a href="#" class="catalog-item__link">
+							<div class="catalog-item__img"
+								style="background-image:url('../../img/catalog-item-1.jpg');">
+								<div class="catalog-item__favorite"></div>
+							</div>
+						</a><a href="#" class="catalog-item__link">
+							<div class="catalog-item__title">Кольцо Inês</div>
+						</a>
+						<div class="catalog-item__subtitle">1 бриллиант
+							- 0,51 карата
+						</div>
+						<div class="catalog-item__price">218 000 р.</div>
+					</div>
+					<div class="catalog-item"><a href="#" class="catalog-item__link">
+							<div class="catalog-item__img"
+								style="background-image:url('../../img/catalog-item-2.jpg');">
+								<div class="catalog-item__favorite"></div>
+							</div>
+						</a><a href="#" class="catalog-item__link">
+							<div class="catalog-item__title">Кольцо Sophia</div>
+						</a>
+						<div class="catalog-item__subtitle">1 бриллиант
+							- 0,51 карата
+						</div>
+						<div class="catalog-item__price">218 000 р.</div>
+					</div>
+					<div class="catalog-item"><a href="#" class="catalog-item__link">
+							<div class="catalog-item__img"
+								style="background-image:url('../../img/catalog-item-3.jpg');">
+								<div class="catalog-item__favorite"></div>
+							</div>
+						</a><a href="#" class="catalog-item__link">
+							<div class="catalog-item__title">Кольцо Josephine</div>
+						</a>
+						<div class="catalog-item__subtitle">33 бриллианта
+							- 0,26 карата
+						</div>
+						<div class="catalog-item__price">56 080 р.</div>
+					</div>
+					<div class="catalog-item"><a href="#" class="catalog-item__link">
+							<div class="catalog-item__img"
+								style="background-image:url('../../img/catalog-item-4.jpg');">
+								<div class="catalog-item__favorite"></div>
+							</div>
+						</a><a href="#" class="catalog-item__link">
+							<div class="catalog-item__title">Кольцо Eleonora</div>
+						</a>
+						<div class="catalog-item__subtitle">25 бриллиант
+							- 0,66 карата
+						</div>
+						<div class="catalog-item__price">272 590 р.</div>
+					</div>
+					<div class="catalog-item"><a href="#" class="catalog-item__link">
+							<div class="catalog-item__img"
+								style="background-image:url('../../img/catalog-item-5.jpg');">
+								<div class="catalog-item__favorite"></div>
+							</div>
+						</a><a href="#" class="catalog-item__link">
+							<div class="catalog-item__title">Кольцо Christina</div>
+						</a>
+						<div class="catalog-item__subtitle">23 бриллианта - 0,66 карата</div>
+						<div class="catalog-item__price">163 490 р.</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__row">
+				<div class="menu-footer">
+					<div class="menu-footer__title">О компании </div>
+					<div class="menu-footer__body">
+						<ul class="menu-footer__links">
+							<li><a href="#">О нас</a></li>
+						</ul>
+						<div class="soc-icons">
+							<a href="#"><i class="soc-icons__icon insta"></i></a>
+							<a href="#"><i class="soc-icons__icon fb"></i></a>
+							<a href="#"><i class="soc-icons__icon vk"></i></a>
+						</div>
+
+					</div>
+				</div>
+				<div class="menu-footer">
+					<div class="menu-footer__title">Помощь</div>
+					<div class="menu-footer__body">
+						<ul class="menu-footer__links">
+							<li data-slash="/"><a href="#">Доставка</a></li>
+							<li data-slash="/"><a href="#">Контакты</a></li>
+							<li><a href="#">Обратная связь</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-footer">
+					<div class="menu-footer__title">Контакты </div>
+					<div class="menu-footer__body">
+						<ul class="menu-footer__links">
+							<li>Санкт-Петербург Невский 88 </li>
+							<li><a href="tel:8 800 222 32 32">8 800 222 32 32</a></li>
+							<li><a href="mailto:info@feliksov.ru">info@feliksov.ru</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

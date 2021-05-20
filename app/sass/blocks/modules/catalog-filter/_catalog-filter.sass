@@ -1,0 +1,112 @@
+.catalog-filter
+    display: block
+    position: relative
+    background-color: #fff
+    @include size-xs(10)
+    @include size-sm(10)
+    @include size-md(2)
+    @include size-lg(2)
+    @include col()
+
+    &-icon
+        content: " "
+        display: inline-block
+        position: relative
+        width: 20px
+        height: 20px
+        background-position: center center
+        background-repeat: no-repeat
+        vertical-align: middle
+        margin-right: 15px
+        @include from($break_md)
+            display: none
+
+        &.icon-filter
+            background-image: url("../../../img/filter.svg")
+            cursor: pointer
+
+        &.icon-close
+            display: none
+            margin: 0
+            float: right
+            background-image: url("../../../img/close.svg")
+            cursor: pointer
+
+    &__title
+        display: inline-block
+        font-size: 14px
+        line-height: 20px
+        font-weight: 500
+        padding-bottom: 10px
+        @include from($break_md)
+            font-size: 27px
+
+    &_params
+        display: none
+        @include from($break_md)
+            display: block
+            position: relative
+
+    &_param
+        display: block
+        padding-bottom: 14px
+        &__title
+            padding: 20px 0
+            font-weight: 500
+            font-size: 16px
+
+        &__list
+            margin: 0
+            padding: 0
+
+    a
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.05em
+        text-decoration-line: underline
+
+    &.open
+        @include to($break_md)
+            position: fixed
+            z-index: 1000
+            top: 5vh
+            left: 0
+            max-height: 90vh
+            padding: 10px
+            box-shadow: 0 0 4px 0 #0009
+            overflow-y: scroll
+            .catalog-filter_params
+                display: block
+
+            .icon-close
+                display: block
+
+            & + .catalog-filter_wrapper
+                display: block
+                position: fixed
+                z-index: 999
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                background: #0009
+
+    &_wrapper
+        display: none
+
+    .checkbox
+        label
+            &::before
+                width: 15px
+                height: 15px
+                border-color: #e1e1e1
+                border-radius: 0
+            &:hover
+                &::before
+                    border-color: $acent-color
+        input[type=checkbox]:checked
+            & + label
+                &::after
+                    width: 8px
+                    height: 4px

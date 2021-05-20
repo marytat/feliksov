@@ -1,0 +1,74 @@
+.catalog-sections-top
+
+    @include from ($break_sm)
+        @include u-row-flex(20px)
+
+    @include from ($break_md)
+        @include u-row-flex(36px)
+
+    &__item
+        position: relative
+        background-color: #f5f5f5
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: contain
+
+        @include from ($break_xs)
+            height: 170px
+            margin: 10px auto
+            @include u-col(5px)
+            @include  u-size(10, 10, 5px)
+
+        @include from ($break_sm)
+            height: 170px
+            margin: 10px auto
+            @include u-col(20px)
+            @include  u-size(5, 10, 20px)
+
+        @include from ($break_md)
+            height: 280px
+            margin: 18px auto
+            @include u-col(36px)
+            @include  u-size(5, 10, 36px)
+
+        @include from ($break_lg)
+            height: 280px
+            margin: 18px auto
+            @include u-col(36px)
+            @include  u-size(5, 10, 36px)
+
+        &__title
+            display: inline-block
+            justify-self: baseline
+            position: absolute
+            bottom: 10px
+            left: 0
+            width: calc(100% - 40px)
+            font-size: 15px
+            font-weight: 400
+            text-decoration: none
+            margin: 0 20px
+            line-height: 22px
+
+            @include from ($break_md)
+                font-size: 28px
+                line-height: 52px
+            @include from ($break_lg)
+                width: calc(100% - 80px)
+                margin: 0 40px
+
+            &:after
+                content: " "
+                display: inline-block
+                /*border-radius: 50%*/
+                /*background-color: #72283f*/
+                float: right
+                background-position: center
+                background-repeat: no-repeat
+                background-image: url("../../img/arrow-circle.svg")
+                width: 22px
+                height: 22px
+                background-size: 100%
+                @include from ($break_md)
+                    width: 52px
+                    height: 52px

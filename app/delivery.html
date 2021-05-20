@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Feliksov Diamonds</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="img/banner.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/icon_72x72.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/icon_114x144.ico">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="libs/jquery/slick/slick.css" />
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_top">
+            <div class="header_top_container container">
+                <div class="header_top_left">
+                    <i class="mobile_icon burger"></i>
+                    <a href="#" class="header_top__link"><span class="header_top__link_text">Поиск</span></a>
+                    <a href="#" class="header_top__link"><span class="header_top__link_text">Ювелирное ателье</span></a>
+                </div>
+                <div class="header_top_logo">
+                    <a href="#" class="logo_link">
+                        <img src="/img/logo_feliksov.svg">
+                    </a>
+                </div>
+                <div class="header_top_right">
+                    <a href="#" class="header_top__link"><span class="header_top__link_text">Избранное
+                        </span><i class="mobile_icon favorite active"></i></a>
+                    <a href="#" class="header_top__link enter_link"><span class="header_top__link_text">войти</span></a>
+                    <a href="#" class="header_top__link"><span class="header_top__link_text">корзина</span> <i
+                            class="mobile_icon cart"></i>
+                        <i class="cart_counter">1</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-catalog">
+            <ul class="menu-catalog__list">
+                <li class="menu-catalog__item menu-catalog__item-selected"><a href="#"
+                        class="menu-catalog__link">Кольца</a></li>
+                <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">помолвочные
+                        кольца</a></li>
+                <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Серьги</a>
+                </li>
+                <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">колье</a>
+                </li>
+                <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">браслеты</a></li>
+                <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Подвески</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-mobile">
+            <div class="menu-mobile_top">
+                <ul class="menu-mobile_top_list">
+                    <li class="menu-mobile_top_item"><a href="#" class="menu-mobile_top__link">Поиск</a></li>
+                    <li class="menu-mobile_top_item"><a href="#" class="menu-mobile_top__link">Вход</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-mobile_personal">
+                <div class="menu-mobile_personal__title">Личный кабинет</div>
+                <ul class="menu-mobile_personal_list">
+                    <li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Мои заказы</a>
+                    </li>
+                    <li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Мои бонусы</a>
+                    </li>
+                    <li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Личные
+                            данные</a></li>
+                    <li class="menu-mobile_personal_item"><a href="#" class="menu-mobile_personal__link">Выход</a></li>
+                </ul>
+            </div>
+            <div class="menu-mobile_sections">
+                <ul class="menu-mobile_sections_list">
+                    <li class="menu-mobile_sections_item"><a href="#"
+                            class="menu-mobile_sections__link selected">Кольца</a></li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Помолвочные
+                            кольца</a></li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Серьги</a></li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Колье</a></li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Браслеты</a>
+                    </li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Подвески</a>
+                    </li>
+                    <li class="menu-mobile_sections_item"><a href="#" class="menu-mobile_sections__link">Ювелирное
+                            ателье</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="delivery_page">
+                <div class="left_side">
+                    <ul class="menu-left fixed">
+                        <li class="menu-left_item"><a href="#delivery" class="menu-left_item__link active">Доставка</a>
+                        </li>
+                        <li class="menu-left_item"><a href="#contacts" class="menu-left_item__link">Контакты</a></li>
+                        <li class="menu-left_item"><a href="#feedback" class="menu-left_item__link">Обратная связь</a>
+                        </li>
+                    </ul>
+                    &nbsp;
+
+                </div>
+                <div class="right_side">
+                    <div id="delivery" class="text_block">
+                        <h1 class="caption_title">Доставка</h1>
+
+                        <p>Ювелирное Ателье Feliksov Diamonds выполняет доставку товара службами «СДЭК» Доставка для
+                            клиента
+                            в любую точку
+                            Российской Федерации совершенно бесплатна.</p>
+                        <p>Кроме того, менеджеры ателье готовы подобрать для вас эксклюзивное решение по оплате и
+                            доставке.
+                            Подробнее: <a href="mailto:info@feliksov.ru">(info@feliksov.ru)</a></p>
+                    </div>
+                    <div id="contacts" class="text_block">
+                        <h2 class="caption_title">Контакты</h2>
+
+                        <p>
+                            ООО «Феликсов Даймондс»</p>
+                        <p>
+                            191025 ГОРОД САНКТ-ПЕТЕРБУРГ ПРОСПЕКТ НЕВСКИЙ ДОМ 88 ЛИТЕР А ПОМЕЩЕНИЕ 32-Н</p>
+                        <p>
+                            ОГРН 1207800086130<br>
+                            Дата присвоения ОГРН 16.07.2020
+                        </p>
+                        <p>
+                            ИНН 7841089698</p>
+                        <p>
+                            КПП 784101001</p>
+                    </div>
+                    <div id="feedback" class="text_block">
+                        <h3 class="caption_title">Обратная связь</h3>
+
+                        <span class="caption_subtitle">Есть вопросы?</span>
+                        <div class="feedback_buttons">
+                            <button class="button tab_btn" id="callback_btn">Обратный звонок</button>
+                            <button class="button button-gray not_active_tab tab_btn" id="feedback_btn">Получить ответ
+                                по
+                                почте</button>
+                        </div>
+
+                        <form action=" " name="callback" class="feedback_form" id="callback_form" method="">
+                            <div class="input_block">
+                                <label for="callback_name" class="label">Имя</label>
+                                <input type="text" name="name" id="callback_name">
+                            </div>
+
+                            <div class="validate_block">
+                                <div class="input_block">
+                                    <label for="callback_phone">Телефон</label>
+                                    <input type="tel" placeholder="+7-ХХХ-ХХХ-ХХ-ХХ" name="phone" id="callback_phone">
+                                </div>
+                                <div class="button_block">
+                                    <button class="button button-bordered" id="sms_code_btn">Отправить код</button>
+                                </div>
+
+                                <div class="input_block">
+                                    <label for="sms_code">Введите код из СМС</label>
+                                    <input type="text" name="sms_code" id="sms_code">
+                                </div>
+                            </div>
+                            <div class="input_block">
+                                <label for="callback_message">Ваш вопрос</label>
+                                <input type="text" name="message" id="callback_message">
+                            </div>
+                            <div class="checkbox checkbox_personal">
+                                <input type="checkbox" name="personaldata" id="callback_personal-data">
+                                <label for="callback_personal-data">Согласен с условиями обработки <a
+                                        href="/personal.html" target="_blank">персональных
+                                        данных</a></label>
+                            </div>
+                            <input type="submit" value="Отправить" class="button button-wide" disabled
+                                id="callback_submit">
+                        </form>
+
+                        <form action=" " name="feedback" class="feedback_form hide_form" id="feedback_form" method="">
+                            <div class="input_block">
+                                <label for="feedback_name">Имя</label>
+                                <input type="text" name="name" id="feedback_name">
+                            </div>
+                            <div class="input_block">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                            </div>
+                            <div class="input_block">
+                                <label for="feedback_message">Ваш вопрос</label>
+                                <input type="text" name="message" id="feedback_message">
+                            </div>
+                            <div class="checkbox checkbox_personal">
+                                <input type="checkbox" name="personaldata" id="feedback_personal-data">
+                                <label for="feedback_personal-data">Согласен с условиями обработки <a
+                                        href="/personal.html" target="_blank">персональных
+                                        данных</a></label>
+                            </div>
+                            <input type="submit" value="Отправить" class="button button-wide" id="feedback_submit"
+                                disabled>
+                        </form>
+
+                        <div id="modal_ans" style="display:none;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, vero.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__row">
+                <div class="menu-footer">
+                    <div class="menu-footer__title">О компании </div>
+                    <div class="menu-footer__body">
+                        <ul class="menu-footer__links">
+                            <li><a href="">О нас</a></li>
+                        </ul>
+                        <div class="soc-icons">
+                            <a href="#"><i class="soc-icons__icon insta"></i></a>
+                            <a href="#"><i class="soc-icons__icon fb"></i></a>
+                            <a href="#"><i class="soc-icons__icon vk"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu-footer">
+                    <div class="menu-footer__title">Помощь</div>
+                    <div class="menu-footer__body">
+                        <ul class="menu-footer__links">
+                            <li data-slash="/"><a href="#">Доставка</a></li>
+                            <li data-slash="/"><a href="#">Контакты</a></li>
+                            <li><a href="#">Обратная связь</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-footer">
+                    <div class="menu-footer__title">Контакты </div>
+                    <div class="menu-footer__body">
+                        <ul class="menu-footer__links">
+                            <li>Санкт-Петербург Невский 88 </li>
+                            <li><a href="tel:8 800 222 32 32">8 800 222 32 32</a></li>
+                            <li><a href="mailto:info@feliksov.ru">info@feliksov.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal active" id="modal-order-success">
+        <div class="modal-container">
+            <div class="modal-card">
+                <div class="modal-card_close"></div>
+                <div class="centered product_order_success">
+                    <h3 class="modal-card_title">Спасибо за&nbsp;обратную связь!</h3>
+                    <div class="is-text-gray">В&nbsp;ближайшее время менеджер напишет Вам ответ на&nbsp;ваш запрос!
+                    </div>
+                    <a class="button" href="#">Перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

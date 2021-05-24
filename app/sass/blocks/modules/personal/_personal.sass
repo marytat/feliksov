@@ -1,0 +1,382 @@
+.personal-section
+    @include row-flex()
+    padding-top: 50px
+    &.is-confirmed
+        text-align: center
+        font-size: 12px
+        line-height: 1.3
+        color: #ACACAC
+        justify-content: center
+        @include from($break_md)
+            font-size: 14px
+        .is-empty_container
+            @include col()
+            @include size-xs(10)
+            @include size-sm(7)
+            @include size-md(6)
+            @include size-lg(5)
+            margin: auto
+            padding-top: 40px
+            padding-bottom: 40px
+            @include from($break_md)
+                padding-top: 90px
+                padding-bottom: 90px
+        h1
+            color: $primary
+            margin: auto
+            font-family: 'Montserrat', sans-serif
+            font-size: 14px
+            font-weight: 700
+            padding-bottom: 10px
+            @include from($break_md)
+                font-size: 40px
+                font-weight: 500
+                padding-bottom: 20px
+        .button
+            margin: 20px auto
+            min-width: 300px
+            font-size: 14px
+            @include from($break_md)
+                min-width: 500px
+    h3
+        font-weight: 500
+        font-size: 23px
+        line-height: 1.2
+        letter-spacing: 0.02em
+        color: #000000
+        margin-bottom: 10px
+    &_left
+        @include col()
+        @include size-xs(10)
+        @include size-sm(2)
+        @include size-md(2)
+        @include size-lg(2)
+        font-size: 18px
+        line-height: 1.2
+        letter-spacing: 0.06em
+        font-weight: 400
+        padding-right: 20px
+        &__menu
+            list-style-type: none
+            li
+                &:not(:last-child)
+                    margin-bottom: 40px
+                a
+                    color: #000000
+                    font-size: 18px
+                    line-height: 1.2
+                    letter-spacing: 0.06em
+                    font-weight: 400
+                    text-decoration: none
+                &.active
+                    a
+                        color: $primary
+                        font-weight: 700
+    &_right
+        @include col()
+        @include size-xs(10)
+        @include size-sm(6)
+        @include size-md(6)
+        @include size-lg(6)
+        &.wide
+            @include size-xs(10)
+            @include size-sm(8)
+            @include size-md(8)
+            @include size-lg(8)
+        h1
+            font-size: 30px
+            padding-bottom: 23px
+            padding-top: 0
+        .personal-section_item
+            margin-bottom: 30px
+            @include row-flex()
+
+    &_item
+        border-bottom: 2px solid #E3E3E3
+        padding-bottom: 20px
+        margin-bottom: 20px
+        .person
+            font-weight: 300
+            color: #959595
+        & + .personal-section_note
+            margin-top: -20px
+            max-width: 470px
+    &_note
+        font-size: 14px
+        line-height: 1.2
+        color: #acacac
+    &_title
+        font-weight: 700
+        color: $primary
+        margin-bottom: 15px
+    &_exit
+        font-size: 18px
+        line-height: 1.2
+        letter-spacing: 0.06em
+        color: #000000
+        background: none
+        border: none
+        padding: 0
+        cursor: pointer
+    &_order-list
+        &__number
+            font-weight: 500
+            font-size: 23px
+            line-height: 1.2
+            letter-spacing: 0.02em
+            color: #000000
+            @include col()
+            @include size-xs(3)
+            @include size-sm(3)
+            @include size-md(3)
+            @include size-lg(3)
+        &__date
+            font-weight: 300
+            font-size: 13px
+            line-height: 1.3
+            color: #ACACAC
+            margin-top: 14px
+        &__price
+            @include col()
+            @include size-xs(4)
+            @include size-sm(4)
+            @include size-md(4)
+            @include size-lg(4)
+            dl
+                margin: 0 0 10px
+                dt
+                    display: inline-block
+                    width: calc(50% - 23px)
+                    text-align: right
+                    font-weight: 300
+                    font-size: 13px
+                    line-height: 1.3
+                    color: #000000
+                dd
+                    display: inline-block
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 1.25
+                    letter-spacing: 0.02em
+                    color: #A0A0A0
+                    margin-right: 0
+                    margin-left: 23px
+                    &.personal-section_order__total
+                        font-weight: 600
+                        color: $primary
+        &__status
+            @include col()
+            @include size-xs(2.5)
+            @include size-sm(2.5)
+            @include size-md(2.5)
+            @include size-lg(2.5)
+            font-weight: 300
+            font-size: 13px
+            line-height: 1.4
+            text-align: right
+            color: #000000
+            a
+                font-weight: 500
+                font-size: 13px
+                text-decoration-line: underline
+                color: #ACACAC
+        &__paid
+            font-weight: 500
+            margin: 10px 0
+    &_order
+        @include row-flex()
+        font-size: 17px
+        line-height: 1.4
+        color: #000000
+
+        &__left
+            @include col()
+            @include size-xs(6)
+            @include size-sm(6)
+            @include size-md(6)
+            @include size-lg(6)
+        &__status
+            margin-bottom: 28px
+            .button
+                margin-left: 40px
+        &__delivery
+            margin-bottom: 20px
+            margin-top: 20px
+            &-item
+                color: #acacac
+                margin-bottom: 10px
+            &-phone
+                color: #acacac
+                margin-top: 10px
+        &__right
+            @include col()
+            @include size-xs(4)
+            @include size-sm(4)
+            @include size-md(4)
+            @include size-lg(4)
+        &__cost
+            background: #f8f8f8
+            padding: 30px 20px
+            box-sizing: border-box
+            h3
+                font-size: 21px
+                letter-spacing: 0
+                margin-bottom: 30px
+
+            dl
+                font-size: 17px
+                line-height: 1.2
+                margin-top: 5px
+                margin-bottom: 5px
+                @include row-flex()
+                justify-content: space-between
+                dt
+                    color: $default-color
+                    @include col()
+                    @include size-xs(6)
+                dd
+                    @include col()
+                    @include size-xs(4)
+                    text-align: right
+        &__total
+            border-top: 2px solid #e3e3e3
+            padding-top: 20px
+            margin-top: 15px
+            dl
+                dt
+                    color: #000
+                dd
+                    &.result
+                        font-weight: 500
+    &_items
+        border-top: 2px solid #e3e3e3
+        padding-top: 30px
+        margin-top: 40px
+        text-align: center
+        @include col()
+        @include size-xs(10)
+        @include size-sm(6)
+        @include size-md(6)
+        @include size-lg(6)
+        h3
+            margin-bottom: 20px
+            text-align: left
+        .button
+            font-size: 14px
+            padding: 18px 0
+            width: 357px
+    &_list
+        border-bottom: 2px solid #e3e3e3
+        margin-bottom: 16px
+
+        &__item
+            position: relative
+            margin-top: 20px
+            margin-bottom: 20px
+            @include row-flex()
+            &:not(:last-child)
+                margin-bottom: 30px
+        &__img
+            width: 180px
+            height: 180px
+            overflow: hidden
+            position: relative
+            img
+                width: 100%
+                max-width: 100%
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+        &__desc
+            margin-left: 35px
+            margin-right: 35px
+            text-align: left
+            flex-grow: 2
+        &__title
+            font-weight: 400
+            font-size: 21px
+            line-height: 1.2
+            margin-bottom: 10px
+        &__subtitle
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.2
+            color: #7a7a7a
+        &__price
+            font-weight: 500
+            font-size: 15px
+            line-height: 1.2
+            text-align: right
+            padding-right: 48px
+            &-status
+                color: $acent-color
+                margin: 10px 0 20px
+            &-part
+                font-weight: 700
+                font-size: 11px
+                margin-bottom: 5px
+                &:not(:first-child)
+                    margin-top: 15px
+            .button
+                font-size: 12px
+                max-width: 183px
+                padding: 14px 0
+            &.is-paid-process
+                .personal-section_list__price-status
+                    font-size: 11px
+                    font-weight: 700
+                    margin-top: 5px
+                    &.is-paid
+                        color: #5EA752
+        &__delete
+            border: none
+            width: 18px
+            height: 18px
+            background: transparent url('../../img/close.svg') 0 0 no-repeat
+            background-size: contain
+            position: absolute
+            top: 0
+            right: 0
+            cursor: pointer
+    &_form
+        margin-top: 40px
+        max-width: 700px
+        .validate_block
+            @include clearfix()
+            .input_block
+                display: block
+                width: 100%
+                @include from($break_md)
+                    display: inline-block
+                    width: 35%
+                    float: left
+
+                @include from($break_lg)
+                    width: 50%
+
+            .button_block
+                display: block
+                width: 100%
+                text-align: right
+                @include from($break_md)
+                    display: inline-block
+                    float: right
+                    width: 65%
+                    height: 160px
+
+                @include from($break_lg)
+                    width: 50%
+
+                button
+                    width: 100%
+                    margin: 0 0 20px 0
+                    @include from($break_md)
+                        width: calc(100% - 44px)
+                        margin: 0 auto
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 22px
+                        padding: 13px 0

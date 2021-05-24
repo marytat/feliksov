@@ -91,6 +91,7 @@ gulp.task('js', function () {
 		'app/libs/jquery/slick/slick.min.js',
 		'app/libs/jquery/dist/jquery.maskedinput.min.js',
 		'app/libs/jquery/jquery.validate/jquery.validate.min.js',
+		'app/libs/jquery/jquery.form/jquery.form.js',
 		'app/js/common.js', // Всегда в конце
 	])
 		.pipe(concat('scripts.min.js'))

@@ -78,12 +78,6 @@ nextBtns.forEach(function (btn) {
   };
 });
 
-// document.querySelector('#gift-on-the-way .button').onclick = function () {
-// 	modalClose(this.closest('.modal'));
-// }
-
-
-
 $(document).ready(function () {
   //плавная прокрутка к  #
   $('.menu-left_item__link').bind('click', function (e) {
@@ -156,12 +150,13 @@ $(document).ready(function () {
 
   $(".delivery_method__show").click(function () {
     if ($(this).hasClass("map-show")) {
-      $('.tab_btn').each(function () {
-        $(this).toggleClass('hidden');
-      });
-      $('.delivery_method__showmap').each(function () {
-        $(this).toggleClass('hidden');
-      });
+      $(this).text('Скрыть карту');
+      $(this).removeClass('map-show');
+      $('.delivery_method__showmap').removeClass('hidden');
+    } else {
+      $(this).text('Показать на карте');
+      $(this).addClass('map-show');
+      $('.delivery_method__showmap').addClass('hidden');
     }
   });
 
@@ -194,6 +189,14 @@ $(document).ready(function () {
     autoclear: false
   }).on('click', function () {
     if ($(this).val() === '+7 (___) ___-__-__') {
+      $(this).get(0).setSelectionRange(0, 0);
+    }
+  });
+
+  $("[data-mask=date]").mask('99.99.9999', {
+    autoclear: false
+  }).on('click', function () {
+    if ($(this).val() === '__.__.____') {
       $(this).get(0).setSelectionRange(0, 0);
     }
   });
@@ -261,8 +264,11 @@ $(document).ready(function () {
       }
     },
     submitHandler: function submitHandler(form) {
-      sendAjaxForm(form);
-      // stopSend(form);
+      //sendAjaxForm(form);
+      $(form).submit(function (event) {
+        event.preventDefault();
+        $('#modal-order-success').addClass('active');
+      });
     }
   };
   $('#product-order').bind('keyup blur click', function () {
@@ -323,7 +329,6 @@ $(document).ready(function () {
     },
     submitHandler: function submitHandler(form) {
       sendAjaxForm(form);
-      // stopSend(form);
     }
   };
   $('#delivery_self_form').bind('keyup blur click', function () {
@@ -396,7 +401,6 @@ $(document).ready(function () {
     },
     submitHandler: function submitHandler(form) {
       sendAjaxForm(form);
-      // stopSend(form);
     }
   };
   $('#delivery_form').bind('keyup blur click', function () {
@@ -458,7 +462,11 @@ $(document).ready(function () {
       }
     },
     submitHandler: function submitHandler(form) {
-      sendAjaxForm(form);
+      // sendAjaxForm(form);
+      $(form).submit(function (event) {
+        event.preventDefault();
+        $('#modal-feedback-success').addClass('active');
+      });
     }
   };
   $('#callback_form').bind('keyup blur click', function () {
@@ -468,6 +476,199 @@ $(document).ready(function () {
       $('#callback_submit').addClass('button_disabled').attr('disabled', true);
     }
   });
+
+  var optionsPersonForm = {
+    errorElement: "em",
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.parent("div").find("label"));
+    },
+    rules: {
+      surname: {
+        required: true
+        // nameValidate: true
+      },
+      name: {
+        required: true
+        // nameValidate: true
+      },
+      midlename: {
+        required: true
+        // nameValidate: true
+      },
+      birthday: {
+        required: true
+      },
+      email: {
+        required: true,
+        // email: true,
+        emailValidate: true
+      },
+      gender: {
+        required: true
+      },
+      phone: {
+        required: true,
+        phoneValidate: true
+      },
+      personaldata: {
+        required: true
+      },
+      sms_code: {
+        required: true
+      }
+    },
+    messages: {
+      surname: {
+        required: "Представьтесь пожалуйста"
+      },
+      name: {
+        required: "Представьтесь пожалуйста"
+      },
+      midlename: {
+        required: "Представьтесь пожалуйста"
+      },
+      birthday: {
+        required: "Укажите дату рождения"
+      },
+      email: {
+        required: "Укажите email",
+        email: "Формат ввода email@mail.ru"
+      },
+      phone: {
+        required: "Укажите номер телефона"
+      },
+      gender: {
+        required: "Укажите пол"
+      },
+      sms_code: {
+        required: "Введите код "
+      },
+      personaldata: {
+        required: "Дайте согласие "
+      }
+    },
+    submitHandler: function submitHandler(form) {
+      //sendAjaxForm(form);
+      $(form).submit(function (event) {
+        event.preventDefault();
+        $('#modal-personal-change').addClass('active');
+      });
+    }
+  };
+  $('#person_form').bind('keyup blur click', function () {
+    if ($('#person_form').validate(optionsPersonForm).checkForm()) {
+      $('#person_submit').removeAttr('disabled');
+    } else {
+      $('#person_submit').addClass('button_disabled').attr('disabled', true);
+    }
+  });
+
+  var optionsFeedbackForm = {
+    errorElement: "em",
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.parent("div").find("label"));
+    },
+    rules: {
+      name: {
+        required: true
+        // nameValidate: true
+      },
+      email: {
+        required: true,
+        emailValidate: true
+      },
+      message: {
+        required: true
+        // minlength: 10
+      },
+      personaldata: {
+        required: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Представьтесь пожалуйста"
+      },
+      email: {
+        required: "Укажите email",
+        email: "Формат ввода email@mail.ru"
+      },
+      message: {
+        required: "Напишите вопрос"
+        // minlength: "Минимальная длина 10 символов"
+      },
+      personaldata: {
+        required: "Дайте согласие "
+      }
+    },
+    submitHandler: function (form) {
+      // sendAjaxForm(form);
+      $(form).submit(function (event) {
+        event.preventDefault();
+        $('#modal-feedback-success').addClass('active');
+      });
+    }
+  };
+  $('#feedback_form').bind('keyup blur click', function () {
+    if ($('#feedback_form').validate(optionsFeedbackForm).checkForm()) {
+      $('#feedback_submit').removeAttr('disabled');
+    } else {
+      $('#feedback_submit').addClass('button_disabled').attr('disabled', true);
+    }
+  });
+
+  var optionsLoginForm = {
+    errorElement: "em",
+    errorPlacement: function errorPlacement(error, element) {
+      error.appendTo(element.parent("div").find("label"));
+    },
+    rules: {
+      phone: {
+        required: true,
+        phoneValidate: true
+      },
+      personaldata: {
+        required: true
+      }
+    },
+    messages: {
+      phone: {
+        required: "Укажите номер телефона"
+      },
+      personaldata: {
+        required: "Дайте согласие "
+      }
+    },
+    submitHandler: function (form) {
+      // sendAjaxForm(form);
+      $(form).submit(function (event) {
+        event.preventDefault();
+        let loginPhone = $('#login_phone');
+        loginPhone.closest('.input_block').addClass('is-disabled');
+        loginPhone.attr('disabled', 'disabled');
+        loginPhone.next('.note').addClass('hidden');
+        loginPhone.closest('form').find('.checkbox_personal').addClass('hidden');
+        loginPhone.closest('form').find('input[type="submit"]').addClass('hidden');
+        $('#sms_code').closest('.input_block').removeClass('hidden');
+      });
+    }
+  };
+  $('#login_form').bind('keyup blur click', function () {
+    if ($('#login_form').validate(optionsLoginForm).checkForm()) {
+      $('#login_submit').removeAttr('disabled');
+    } else {
+      $('#login_submit').addClass('button_disabled').attr('disabled', true);
+    }
+  });
+
+  $('.input_change').click(function (event) {
+    event.preventDefault();
+    $(this).closest('.input_block').removeClass('is-disabled');
+    $(this).closest('.input_block').find('input').removeAttr('disabled');
+    $(this).closest('form').find('input[type="submit"]').removeClass('hidden');
+    $('#sms_code').closest('.input_block').addClass('hidden');
+  });
+
   $('.sms_code_btn').click(function (event) {
     event.preventDefault();
     //send sms code
@@ -511,14 +712,9 @@ $(document).ready(function () {
     // });
   });
 
-  function stopSend(event) {
-    event.preventDefault();
-  }
-
   function sendAjaxForm(event) {
     // var request;
     event.preventDefault();
-    console.log('dddd');
     // $.fancybox.open({
     //   src: '#modal_ans',
     //   type: 'inline'
@@ -631,6 +827,14 @@ $(document).ready(function () {
         // Добавляем метку в коллекцию
         cityCollection.add(shopPlacemark);
 
+        shopPlacemark.events.add('click', function (e) {
+          if (!shopPlacemark.balloon.isOpen()) {
+            coords = e.get('coords');
+            var target = e.get('target').properties.get('hintContent');
+            $('.delivery_method__adress').text(target);
+          }
+        });
+
       }
 
       placemarkCollections[i] = cityCollection;
@@ -639,62 +843,5 @@ $(document).ready(function () {
       myMap.geoObjects.add(cityCollection);
 
     }
-
-    // $('select#cities').trigger('change');
   }
-
-
-  // // Валидация почты
-  // function validateEmail(email) {
-  //   if (email.length === 0) {
-  //     return { error: 'Это поле обязательно для заполнения' };
-  //   }
-  //   let pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  //   if (email.search(pattern) === -1) {
-  //     return { error: 'Поле не соответствует формату' };
-  //   }
-  //   return { valid: true };
-  // }
-
-  // // Валидация номера телефона
-  // function validatePhone(phone) {
-  //   if (phone.length === 0) {
-  //     return { error: 'Это поле обязательно для заполнения' };
-  //   }
-  //   let pattern = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/;
-  //   if (phone.search(pattern) === -1) {
-  //     return { error: 'Поле не соответствует формату' };
-  //   }
-  //   return { valid: true };
-  // }
-
-  // // Валидация имени
-  // function validateName(name) {
-  //   if (name.length === 0) {
-  //     return { error: 'Это поле обязательно для заполнения' };
-  //   }
-  //   let pattern = /^[А-Яа-яЁё\s]+$/;
-  //   if (name.search(pattern) === -1) {
-  //     return { error: 'Поле не соответствует формату' };
-  //   }
-  //   return { valid: true };
-  // }
-
-  // function validateInput($input, validate) {
-  //   let result = validate($input.val());
-  //   if (result.error) {
-  //     $input.closest('.form-field').removeClass('correct-input');
-  //     $input.closest('.form-field').addClass('has-error')
-  //       .find('.form-field-error')
-  //       .text(result.error);
-
-  //   } else {
-  //     $input.closest('.form-field').addClass('correct-input');
-  //     $input.closest('.form-field').removeClass("has-error")
-  //       .find('.form-field-error')
-  //       .text('');
-  //   }
-
-  //   return result.valid;
-  // }
 });

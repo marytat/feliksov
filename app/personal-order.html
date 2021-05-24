@@ -110,123 +110,120 @@
 
     <div class="main-content">
         <div class="container">
-            <div class="delivery_page">
-                <div class="left_side">
-                    <ul class="menu-left fixed">
-                        <li class="menu-left_item"><a href="#delivery" class="menu-left_item__link active">Доставка</a>
-                        </li>
-                        <li class="menu-left_item"><a href="#contacts" class="menu-left_item__link">Контакты</a></li>
-                        <li class="menu-left_item"><a href="#feedback" class="menu-left_item__link">Обратная связь</a>
-                        </li>
-                    </ul>
-                    &nbsp;
-
+            <div class="personal-section">
+                <div class="personal-section_left">
+                    <div class="personal-section_item">
+                        <div class="personal-section_title">Гость</div>
+                        <div class="person">+7 999 123 45 67</div>
+                    </div>
+                    <div class="personal-section_item">
+                        <ul class="personal-section_left__menu">
+                            <li class="active"><a href="#">Мои заказы</a></li>
+                            <li><a href="#">Мои бонусы</a></li>
+                            <li><a href="#">Личные данные</a></li>
+                        </ul>
+                    </div>
+                    <button class="personal-section_exit">Выход</button>
                 </div>
-                <div class="right_side">
-                    <div id="delivery" class="text_block">
-                        <h1 class="caption_title">Доставка</h1>
 
-                        <p>Ювелирное Ателье Feliksov Diamonds выполняет доставку товара службами «СДЭК» Доставка для
-                            клиента
-                            в любую точку
-                            Российской Федерации совершенно бесплатна.</p>
-                        <p>Кроме того, менеджеры ателье готовы подобрать для вас эксклюзивное решение по оплате и
-                            доставке.
-                            Подробнее: <a href="mailto:info@feliksov.ru">(info@feliksov.ru)</a></p>
+                <div class="personal-section_right wide">
+                    <div class="personal-section_item">
+                        <h1>Заказ №1234567890123</h1>
                     </div>
-                    <div id="contacts" class="text_block">
-                        <h2 class="caption_title">Контакты</h2>
-
-                        <p>
-                            ООО «Феликсов Даймондс»</p>
-                        <p>
-                            191025 ГОРОД САНКТ-ПЕТЕРБУРГ ПРОСПЕКТ НЕВСКИЙ ДОМ 88 ЛИТЕР А ПОМЕЩЕНИЕ 32-Н</p>
-                        <p>
-                            ОГРН 1207800086130<br>
-                            Дата присвоения ОГРН 16.07.2020
-                        </p>
-                        <p>
-                            ИНН 7841089698</p>
-                        <p>
-                            КПП 784101001</p>
-                    </div>
-                    <div id="feedback" class="text_block">
-                        <h3 class="caption_title">Обратная связь</h3>
-
-                        <span class="caption_subtitle">Есть вопросы?</span>
-                        <div class="feedback_buttons">
-                            <button class="button tab_btn" id="callback_btn">Обратный звонок</button>
-                            <button class="button button-gray not_active_tab tab_btn" id="feedback_btn">Получить ответ
-                                по
-                                почте</button>
+                    <div class="personal-section_order">
+                        <div class="personal-section_order__left">
+                            <h3>Статус заказа</h3>
+                            <div class="personal-section_order__status">
+                                В обработке
+                                <button class="button button-cancel modal-call" data-modal="modal-order-cancel">Отменить
+                                    заказ</button>
+                            </div>
+                            <h3>Доставка СДЭК</h3>
+                            <div class="personal-section_order__delivery">
+                                <div class="personal-section_order__delivery-item">Адрес доставки:</div>
+                                <div>СПб, Чкаловский проспект, д. 54, кв. 19</div>
+                            </div>
+                            <div class="personal-section_order__delivery">
+                                <div class="personal-section_order__delivery-item">Номер отслеживания СДЭК:</div>
+                                <div>№1234567890</div>
+                            </div>
+                            <div class="personal-section_order__delivery">
+                                <div class="personal-section_order__delivery-item">Получатель:</div>
+                                <div>Кузнецов Иван</div>
+                                <div class="personal-section_order__delivery-phone">+7 999 123 45 67</div>
+                            </div>
                         </div>
+                        <div class="personal-section_order__right">
+                            <div class="personal-section_order__cost">
+                                <h3>Стоимость заказа</h3>
 
-                        <form action="" name="callback" class="feedback_form" id="callback_form">
-                            <div class="input_block">
-                                <label for="callback_name" class="label">Имя</label>
-                                <input type="text" name="name" id="callback_name">
-                            </div>
-
-                            <div class="validate_block">
-                                <div class="input_block">
-                                    <label for="callback_phone">Телефон</label>
-                                    <input type="tel" placeholder="+7-ХХХ-ХХХ-ХХ-ХХ" name="phone" id="callback_phone"
-                                        data-mask="phone">
+                                <dl>
+                                    <dt>Кольцо Christina</dt>
+                                    <dd>163 490 ₽</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Кольцо Christina</dt>
+                                    <dd>163 490 ₽</dd>
+                                </dl>
+                                <div class="personal-section_order__total">
+                                    <dl>
+                                        <dt>Стоимость:</dt>
+                                        <dd>373 695 ₽</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Предоплата:</dt>
+                                        <dd>0 ₽</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Итог:</dt>
+                                        <dd class="result">373 695 ₽</dd>
+                                    </dl>
                                 </div>
-                                <div class="button_block">
-                                    <button class="button button-bordered" id="sms_code_btn">Отправить код</button>
-                                </div>
-
-                                <div class="input_block">
-                                    <label for="sms_code">Введите код из СМС</label>
-                                    <input type="text" name="sms_code" id="sms_code">
-                                </div>
                             </div>
-                            <div class="input_block">
-                                <label for="callback_message">Ваш вопрос</label>
-                                <input type="text" name="message" id="callback_message">
-                            </div>
-                            <div class="checkbox checkbox_personal">
-                                <input type="checkbox" name="personaldata" id="callback_personal-data">
-                                <label for="callback_personal-data">Согласен с условиями обработки <a
-                                        href="/personal.html" target="_blank">персональных
-                                        данных</a></label>
-                            </div>
-                            <input type="submit" value="Отправить" class="button button-wide" disabled
-                                id="callback_submit">
-                        </form>
-
-                        <form action="" name="feedback" class="feedback_form hide_form" id="feedback_form">
-                            <div class="input_block">
-                                <label for="feedback_name">Имя</label>
-                                <input type="text" name="name" id="feedback_name">
-                            </div>
-                            <div class="input_block">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
-                            </div>
-                            <div class="input_block">
-                                <label for="feedback_message">Ваш вопрос</label>
-                                <input type="text" name="message" id="feedback_message">
-                            </div>
-                            <div class="checkbox checkbox_personal">
-                                <input type="checkbox" name="personaldata" id="feedback_personal-data">
-                                <label for="feedback_personal-data">Согласен с условиями обработки <a
-                                        href="/personal.html" target="_blank">персональных
-                                        данных</a></label>
-                            </div>
-                            <input type="submit" value="Отправить" class="button button-wide" id="feedback_submit"
-                                disabled>
-                        </form>
-
-                        <div id="modal_ans" style="display:none;">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, vero.
                         </div>
-
                     </div>
                 </div>
+
+                <div class="personal-section_items">
+                    <h3>2 товара</h3>
+                    <div class="personal-section_list">
+                        <div class="personal-section_list__item">
+                            <div class="personal-section_list__img">
+                                <img src="img/catalog-item-4.jpg" alt="Кольцо Christina">
+                            </div>
+                            <div class="personal-section_list__desc">
+                                <div class="personal-section_list__title">Кольцо Christina</div>
+                                <div class="personal-section_list__subtitle">23 бриллианта<br>0,66 карата</div>
+                            </div>
+                            <div class="personal-section_list__price">
+                                163 490 р.
+                                <div class="personal-section_list__price-status">Оплатить изделие</div>
+                                <button class="button">Оплатить изделие</button>
+                            </div>
+                            <button class="personal-section_list__delete"></button>
+                        </div>
+                        <div class="personal-section_list__item">
+                            <div class="personal-section_list__img">
+                                <img src="img/catalog-item-6.jpg" alt="Кольцо Marie Sophie">
+                            </div>
+                            <div class="personal-section_list__desc">
+                                <div class="personal-section_list__title">Кольцо Marie Sophie</div>
+                                <div class="personal-section_list__subtitle">37 бриллиантов<br>0,66 карата</div>
+                            </div>
+                            <div class="personal-section_list__price">
+                                210 205 р.
+                                <div class="personal-section_list__price-status">Оплатить изделие</div>
+                                <button class="button">Оплатить изделие</button>
+                            </div>
+                            <button class="personal-section_list__delete"></button>
+                        </div>
+                    </div>
+                    <button class="button">Оплатить заказ</button>
+                </div>
+
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -272,15 +269,16 @@
         </div>
     </footer>
 
-    <div class="modal " id="modal-feedback-success">
+    <div class="modal " id="modal-order-cancel">
         <div class="modal-container">
             <div class="modal-card">
                 <div class="modal-card_close"></div>
-                <div class="centered product_order_success">
-                    <h3 class="modal-card_title">Спасибо за&nbsp;обратную связь!</h3>
-                    <div class="is-text-gray">В&nbsp;ближайшее время менеджер напишет Вам ответ на&nbsp;ваш запрос!
+                <div class="centered order-cancel">
+                    <h3 class="modal-card_title">Отменить заказ?</h3>
+                    <div class="button-group">
+                        <button class="button">Да, отменить заказ</button>
+                        <button class="button button-darkgray">Нет, оставить заказ</button>
                     </div>
-                    <a class="button" href="#">Перейти в каталог</a>
                 </div>
             </div>
         </div>

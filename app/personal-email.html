@@ -22,7 +22,6 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="libs/jquery/slick/slick.css" />
     <link rel="stylesheet" href="css/main.min.css">
 
@@ -110,123 +109,15 @@
 
     <div class="main-content">
         <div class="container">
-            <div class="delivery_page">
-                <div class="left_side">
-                    <ul class="menu-left fixed">
-                        <li class="menu-left_item"><a href="#delivery" class="menu-left_item__link active">Доставка</a>
-                        </li>
-                        <li class="menu-left_item"><a href="#contacts" class="menu-left_item__link">Контакты</a></li>
-                        <li class="menu-left_item"><a href="#feedback" class="menu-left_item__link">Обратная связь</a>
-                        </li>
-                    </ul>
-                    &nbsp;
-
-                </div>
-                <div class="right_side">
-                    <div id="delivery" class="text_block">
-                        <h1 class="caption_title">Доставка</h1>
-
-                        <p>Ювелирное Ателье Feliksov Diamonds выполняет доставку товара службами «СДЭК» Доставка для
-                            клиента
-                            в любую точку
-                            Российской Федерации совершенно бесплатна.</p>
-                        <p>Кроме того, менеджеры ателье готовы подобрать для вас эксклюзивное решение по оплате и
-                            доставке.
-                            Подробнее: <a href="mailto:info@feliksov.ru">(info@feliksov.ru)</a></p>
-                    </div>
-                    <div id="contacts" class="text_block">
-                        <h2 class="caption_title">Контакты</h2>
-
-                        <p>
-                            ООО «Феликсов Даймондс»</p>
-                        <p>
-                            191025 ГОРОД САНКТ-ПЕТЕРБУРГ ПРОСПЕКТ НЕВСКИЙ ДОМ 88 ЛИТЕР А ПОМЕЩЕНИЕ 32-Н</p>
-                        <p>
-                            ОГРН 1207800086130<br>
-                            Дата присвоения ОГРН 16.07.2020
-                        </p>
-                        <p>
-                            ИНН 7841089698</p>
-                        <p>
-                            КПП 784101001</p>
-                    </div>
-                    <div id="feedback" class="text_block">
-                        <h3 class="caption_title">Обратная связь</h3>
-
-                        <span class="caption_subtitle">Есть вопросы?</span>
-                        <div class="feedback_buttons">
-                            <button class="button tab_btn" id="callback_btn">Обратный звонок</button>
-                            <button class="button button-gray not_active_tab tab_btn" id="feedback_btn">Получить ответ
-                                по
-                                почте</button>
-                        </div>
-
-                        <form action="" name="callback" class="feedback_form" id="callback_form">
-                            <div class="input_block">
-                                <label for="callback_name" class="label">Имя</label>
-                                <input type="text" name="name" id="callback_name">
-                            </div>
-
-                            <div class="validate_block">
-                                <div class="input_block">
-                                    <label for="callback_phone">Телефон</label>
-                                    <input type="tel" placeholder="+7-ХХХ-ХХХ-ХХ-ХХ" name="phone" id="callback_phone"
-                                        data-mask="phone">
-                                </div>
-                                <div class="button_block">
-                                    <button class="button button-bordered" id="sms_code_btn">Отправить код</button>
-                                </div>
-
-                                <div class="input_block">
-                                    <label for="sms_code">Введите код из СМС</label>
-                                    <input type="text" name="sms_code" id="sms_code">
-                                </div>
-                            </div>
-                            <div class="input_block">
-                                <label for="callback_message">Ваш вопрос</label>
-                                <input type="text" name="message" id="callback_message">
-                            </div>
-                            <div class="checkbox checkbox_personal">
-                                <input type="checkbox" name="personaldata" id="callback_personal-data">
-                                <label for="callback_personal-data">Согласен с условиями обработки <a
-                                        href="/personal.html" target="_blank">персональных
-                                        данных</a></label>
-                            </div>
-                            <input type="submit" value="Отправить" class="button button-wide" disabled
-                                id="callback_submit">
-                        </form>
-
-                        <form action="" name="feedback" class="feedback_form hide_form" id="feedback_form">
-                            <div class="input_block">
-                                <label for="feedback_name">Имя</label>
-                                <input type="text" name="name" id="feedback_name">
-                            </div>
-                            <div class="input_block">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
-                            </div>
-                            <div class="input_block">
-                                <label for="feedback_message">Ваш вопрос</label>
-                                <input type="text" name="message" id="feedback_message">
-                            </div>
-                            <div class="checkbox checkbox_personal">
-                                <input type="checkbox" name="personaldata" id="feedback_personal-data">
-                                <label for="feedback_personal-data">Согласен с условиями обработки <a
-                                        href="/personal.html" target="_blank">персональных
-                                        данных</a></label>
-                            </div>
-                            <input type="submit" value="Отправить" class="button button-wide" id="feedback_submit"
-                                disabled>
-                        </form>
-
-                        <div id="modal_ans" style="display:none;">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, vero.
-                        </div>
-
-                    </div>
+            <div class="personal-section is-confirmed">
+                <div class="is-empty_container">
+                    <h1>Адрес электронной<br>почты подтвержден</h1>
+                    <div>Данный адрес электронной почты привязан к вашему профилю</div>
+                    <a href="#" class="button">Войти</a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -271,20 +162,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="modal " id="modal-feedback-success">
-        <div class="modal-container">
-            <div class="modal-card">
-                <div class="modal-card_close"></div>
-                <div class="centered product_order_success">
-                    <h3 class="modal-card_title">Спасибо за&nbsp;обратную связь!</h3>
-                    <div class="is-text-gray">В&nbsp;ближайшее время менеджер напишет Вам ответ на&nbsp;ваш запрос!
-                    </div>
-                    <a class="button" href="#">Перейти в каталог</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="js/scripts.min.js"></script>
 

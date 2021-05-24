@@ -1,0 +1,56 @@
+.login-section
+    @include row-flex()
+    justify-content: center
+    h1
+        font-size: 30px
+        padding: 70px 0 30px
+    &_column
+        @include col()
+        @include size-xs(10)
+        @include size-sm(7)
+        @include size-md(6)
+        @include size-lg(5)
+    .input_block
+        input[type=tel],
+        input[type=text]
+            margin-bottom: 10px
+    .note
+        font-size: 14px
+        line-height: 1.2
+        color: #ACACAC
+        margin-bottom: 20px
+        &.is-centered
+            text-align: center
+            margin: 35px 0
+    .input_block
+        position: relative
+        &.is-disabled
+            position: relative
+            margin-bottom: 30px
+            label
+                margin-bottom: 20px
+            input
+                border: none
+                padding: 0
+            .input_change
+                display: block
+            /*&::after
+             content: ''
+             background: url('../../img/pencil.svg') 0 0 no-repeat
+             width: 20px
+             height: 23px
+             position: absolute
+             top: 34px
+             right: 0
+             cursor: pointer*/
+    .input_change
+        display: none
+        background: transparent url('../../img/pencil.svg') 0 0 no-repeat
+        border: none
+        padding: 0
+        width: 20px
+        height: 23px
+        position: absolute
+        top: 34px
+        right: 0
+        cursor: pointer

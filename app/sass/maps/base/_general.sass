@@ -178,6 +178,28 @@ h1, h2, h3, h4, h5, h6, ul
             font-size: 18px
             line-height: 22px
 
+    &-cancel
+        background: #f9f9f9
+        width: 154px
+        padding: 9px 0
+        font-size: 11px
+        line-height: 1.2
+        text-align: center
+        text-transform: uppercase
+        color: #898989
+        &:hover
+            background: #e4e4e4
+            color: #000000
+        &:active
+            background: #d5d5d5
+            color: #000000
+
+.button-group
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    flex-wrap: nowrap
+
 a
     font-weight: 600
     font-size: 14px
@@ -200,6 +222,9 @@ a
         &:hover, &active
             color: rgba(141, 141, 141, 0.7)
             cursor: not-allowed
+    &.button
+        text-decoration-line: none
+        display: inline-block
 
 p
     font-size: 15px
@@ -353,6 +378,19 @@ h1
                     line-height: 20px
 
 .radio-button
+    &_label
+        display: block
+        position: relative
+        font-size: 14px
+        line-height: 14px
+        font-weight: 400
+        letter-spacing: 0.05em
+        color: #acacac
+    &.inline
+        label
+            display: inline-block
+            vertical-align: middle
+            margin-right: 50px
     label
         position: relative
         padding-left: 54px
@@ -461,6 +499,10 @@ h1
     @include size-sm(10)
     @include size-md(6)
     @include size-lg(6)
+
+input:disabled
+    background-color: transparent
+    color: #ACACAC
 
 .input_block
     label
